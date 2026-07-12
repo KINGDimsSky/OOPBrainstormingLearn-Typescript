@@ -49,5 +49,7 @@ Menyatukan semua potongan kode dari Hari 1-9 menjadi satu simulasi transaksi bel
 
 **---------------------------------------------**
 
-`Day 1 Passed`
- Day 2 
+`Day 1 Passed` - Basic Constructor
+`Day 2 Passed` - different Private and Public method (encapulation but not final)
+Day 3 Soon - (encapsulation getter and setter);
+Day 4 Soon -
