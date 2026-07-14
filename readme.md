@@ -52,4 +52,4 @@ Menyatukan semua potongan kode dari Hari 1-9 menjadi satu simulasi transaksi bel
 `Day 1 Passed` - Basic Constructor
 `Day 2 Passed` - different Private and Public method (encapulation but not final)
 `Day 3 Passed` - (encapsulation getter and setter);
-Day 4 Soon - (Composition Object "Has-A")
+`Day 4 Passed` - (Composition Object "Has-A" /  "Class Product Has-A Class Cart")

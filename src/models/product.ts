@@ -5,6 +5,7 @@ export class Product implements IProduct {
     private _name : string;
     private _price : number;
     private _stock : number;
+    
     constructor(id : number, name : string, price : number, stock : number) {
         this._id = id;
         this._name = name;
