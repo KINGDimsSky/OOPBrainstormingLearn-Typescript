@@ -5,7 +5,6 @@ export class Cart implements ICart{
     private _items : ICartItem[] = []
 
     constructor () {
-        
     }
 
     public addToCart (payloadProduct : Product, quantity : number) : void {
@@ -34,7 +33,7 @@ export class Cart implements ICart{
     }
 
     public calculateTotal () : number {
-       const totalPrice = this._items.reduce((total, item) => total + (item.product.price * item.quantity), 0);
+       const totalPrice = this._items.reduce((total, item) => total + (item.product.getFinalPrice() * item.quantity), 0);
 
        return totalPrice;
     } 

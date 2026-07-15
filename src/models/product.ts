@@ -40,6 +40,10 @@ export class Product implements IProduct {
         return this._stock
     }
 
+    public getFinalPrice () : number {
+        return this._price;
+    }
+
     public restock (stock : number) : void {
         if (stock <= 0) {
             throw new Error(`Stock Produk ${this.name} Tidak boleh Kurang sama dengan Dari 0!`)
