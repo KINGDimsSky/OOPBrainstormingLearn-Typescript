@@ -1,6 +1,6 @@
 import type { IProduct } from "../interfaces/product.js";
 
-export class Product implements IProduct {
+export abstract class Product implements IProduct {
     private _id : number;
     private _name : string;
     private _price : number;
@@ -24,6 +24,10 @@ export class Product implements IProduct {
         return this._name
     }
 
+    set name (name : string) {
+        this._name = name;
+    }
+
     get price () : number {
         return this._price
     }
@@ -40,20 +44,20 @@ export class Product implements IProduct {
         return this._stock
     }
 
-    public getFinalPrice () : number {
-        return this._price;
+    set stock (stock : number) {
+        this._stock = stock
     }
 
-    public restock (stock : number) : void {
+    public restock (stock : number) {
         if (stock <= 0) {
-            throw new Error(`Stock Produk ${this.name} Tidak boleh Kurang sama dengan Dari 0!`)
+            throw new Error ('Stock baru tidak boleh 0 dan Kurang lebih dari 0!')
         }
 
-        this._stock += stock;
+        this._stock += stock
     }
 
-    public showDetailsProduct () : string {
-       return `ID Produk : ${this._id} \n Nama Produk : ${this._name} \n Harga Produk : ${this._price} \n Stock Produk : ${this._stock}`
-    } 
+    public abstract getFinalPrice () : number; 
+
+    public abstract showDetailsProduct () : string;
 
 }

@@ -14,8 +14,12 @@ export class DigitalProduct extends Product {
         this._downloadLink = downloadLink
     }
 
+    public override getFinalPrice(): number {
+        return this.price;
+    }
+
     public override showDetailsProduct(): string {
-        return `${super.showDetailsProduct()}\n Download Link : ${this._downloadLink}`
+        return `Detail product Digital Ini adalah \n Nama : ${this.name}, \n Price : ${this.price}, \n DownloadLink : ${this._downloadLink}`
     }
 
 }

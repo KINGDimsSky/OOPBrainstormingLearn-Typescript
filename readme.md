@@ -22,35 +22,55 @@ Membuat jalan masuk yang aman untuk membaca data dan memvalidasi perubahan nilai
 
 Belajar bagaimana sebuah Class (Keranjang Belanja) bisa menyimpan dan berinteraksi dengan Class lain (Produk).
 
-*Hari 5: Inheritance (Pewarisan Dasar)*
+*Hari 5: Inheritance (Pewarisan Dasar) & Polymorfisme Dasar (Overriding)*
 
 Membuat tipe produk khusus (Produk Fisik vs Produk Digital) yang mewarisi sifat dari produk utama.
 
-*Hari 6: Method Overriding (Polimorfisme Dasar)*
+*Hari 6: Polymorfisme (diperkuat) dengan menggunakan Abstract*
 
 Mengubah perilaku atau fungsi spesifik pada class anak (misal: produk fisik punya cara hitung total yang berbeda karena ada ongkir).
 
-*Hari 7: Pengenalan Interface (Kontrak Kerja)*
+*Hari 7: Multi-Interface & Strategy Pattern (Sistem Pembayaran)*
 
-Belajar membuat standar baku (cetakan tanpa isi) sebelum membuat class baru.
+Fokus: Belajar mengombinasikan banyak interface untuk fitur dinamis seperti E-Wallet vs Transfer Bank
 
-*Hari 8: Implementasi Multi-Interface*
+*Hari 8: Validasi Domain Tingkat Lanjut & Custom Error Handling*
 
-Simulasi metode pembayaran (misal: Cash vs Transfer Bank) yang tunduk pada satu kontrak interface yang sama.
+Fokus: Membuat sistem kebal dari data rusak menggunakan Custom Exceptions (InsufficientStockError, dll).
 
-*Hari 9: Validasi Domain & Error Handling Sederhana*
+*Hari 9: TypeScript Generics & Mock Repository Pattern*
 
-Mengamankan logika bisnis agar sistem otomatis berhenti dan memberi tahu letak kesalahan jika ada data yang tidak masuk akal.
+Fokus: Jembatan Kritis ke Database! Belajar membuat blueprint penyimpanan data yang fleksibel sebelum memakai Prisma
 
-*Hari 10: Integrasi Alur Belanja Akhir*
+*Hari 10: Pemisahan Layer & Integrasi Alur Bisnis (Clean Architecture)*
 
-Menyatukan semua potongan kode dari Hari 1-9 menjadi satu simulasi transaksi belanja yang utuh di file index.ts.
+Fokus: Menggabungkan Controller, Service, dan Repository menjadi satu alur aplikasi retail yang utuh.
 
 
 **---------------------------------------------**
+
+**🚀 Visi Mega Final Project (Pasca Hari 10): E-Commerce Service dengan Prisma ORM**
+
+Setelah kamu lulus dari Hari 10, kita tidak akan berhenti di simulasi CLI sederhana. Kita akan langsung terjun ke arsitektur industri dengan membangun Backend E-Commerce Core API:
+
+*Teknologi: TypeScript, Node.js, Prisma ORM, dan Database (PostgreSQL / MySQL / SQLite).*
+
+*Arsitektur: Clean Architecture / Layered Architecture. Kamu akan melihat bagaimana abstract class dan interface yang kita pelajari 7 hari ini dipakai untuk membungkus query database Prisma agar kodemu rapi, mudah ditest, dan tidak berantakan.*
+
+Fitur Kompleks:
+
+Stock Reservation: Memastikan stok berkurang otomatis saat checkout di database.
+
+Transaction Logs: Menyimpan histori pembayaran secara permanen di tabel database.
+
+Polymorphic Pricing: Menyimpan metadata produk fisik/digital di database dengan relasi tabel yang tepat.
+
+**------------------------------------------------------**
 
 `Day 1 Passed` - Basic Constructor
 `Day 2 Passed` - different Private and Public method (encapulation but not final)
 `Day 3 Passed` - (encapsulation getter and setter);
 `Day 4 Passed` - (Composition Object "Has-A" /  "Class Product Has-A Class Cart")
 `Day 5 Passed` - (Inheritance And Polymorfisme / "Public Method can Override and Class cand Extends")
+`Day 6 Passed` - (Polymorfisme and Abstraction / "When using Abstract and When Using Implements and Parent abstract Can Inheritance abstract Method or props ")
+`Day 7 - Soon` - ('')

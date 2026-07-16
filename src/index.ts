@@ -8,18 +8,17 @@ class Main {
     public static start() : void {
         try {
             console.log ("=== Menginisialisasi Studi kasus Ecommerce Learning Typesript OOP ===");
-    
-            const product1 = new Product(1, "ASUS Rog Stric", 2000000, 10);
-            const product2 = new Product(2, "Axioo HYPE5 AMDX5-2", 6000000, 2);
-    
-            console.log (product1.showDetailsProduct());
-            console.log (`\n`);
-            console.log (product2.showDetailsProduct());
-            console.log (`\n`);
+            
+            //Ini error ya Karena Sudah dibuat Abstract (tidak bisa di instanctiate)
+            /* const product1 = new Product(1, "ASUS Rog Stric", 2000000, 10);
+            const product2 = new Product(2, "Axioo HYPE5 AMDX5-2", 6000000, 2); */
 
             const cart1 = new Cart();
-            cart1.addToCart(product1, 10);
-            cart1.addToCart(product2, 1);
+            
+            const Laptop = new PhysicalProduct({id: 1, name : 'Asus ROG Strix F12', price: 210000, stock: 12, weight: 12.4})
+            const GtaV = new DigitalProduct({id: 2, name: 'Gta V Enhanced Edition', price: 500000, downloadLink: 'GtaV/Steam/Download'})
+
+            cart1.addToCart(Laptop, 1);
             
             console.log ('==== Isi Keranjang Kamu ====')
             cart1.getCartItems().forEach((item) => {
@@ -30,25 +29,8 @@ class Main {
             console.log ('-------------------------------')
             console.log (`Total yang harus dibayar Adalah : ${formatCurrency({amount : totalBelanja})}`)
 
-
-            const cart2 = new Cart();
-            const ProdukFisik = new PhysicalProduct({id: 1, name: 'Cooler HP Kipas', price : 25000, stock: 5, weight: 12.5});
-            const ProductDigital = new DigitalProduct({id : 1,  downloadLink : '/steamgtav/premiumdownload', name: 'Gta V Enhanced Edition', price: 500000})
-
-            cart2.addToCart(ProdukFisik, 1);
-            cart2.addToCart(ProductDigital, 2);
-
-            console.log (ProdukFisik.showDetailsProduct())
-            console.log ('\n');
-            console.log (ProdukFisik.getFinalPrice());
-            console.log (ProdukFisik.showDetailsProduct());
-
-            console.log ('\n');
-            console.log (ProductDigital.getFinalPrice())
-
-            console.log ('\n');
-
-            console.log (cart2.calculateTotal())
+            console.log (formatCurrency({amount : Laptop.calculateShippingFee(10)}));
+            
 
         }catch (error) {
             console.error(error);

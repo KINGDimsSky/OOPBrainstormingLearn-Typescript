@@ -1,6 +1,7 @@
 export interface IProduct { 
     showDetailsProduct () : string;
     getFinalPrice () : number;
+    restock (stock : number) : void;
 }
 
 export interface IDigitalProductsProps {
@@ -18,4 +19,3 @@ export interface IPhysicalProduct {
     stock : number,
     weight: number
 }
-
